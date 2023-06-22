@@ -13,24 +13,24 @@ struct CityView: View {
     
     var body: some View {
         NavigationStack {
-            ScrollView {
+            ScrollView(showsIndicators: false) {
                 VStack {
                     ForEach(cities) { city in
                         NavigationLink {
                             AttractionView(city: city)
                         } label: {
-                            Text(city.name)
+                            CityCard(city: city)
+                                .padding(.bottom, 20)
                         }
-
-                        
                     }
                 }
-                .padding()
-            }
-            .onAppear {
-                cities = DataService.getData()
+                .padding(.horizontal)
             }
         }
+        .onAppear {
+            cities = DataService.getData()
+        }
+        .ignoresSafeArea()
     }
 }
 
