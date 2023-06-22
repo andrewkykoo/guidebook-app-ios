@@ -10,7 +10,7 @@ import Foundation
 struct Attraction {
     var name: String
     var summary: String
-    var description: String
+    var longDescription: String
     var imageName: String
-    var latlong: String
+    var latLong: String
 }

@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct City {
+struct City: Identifiable {
+    var id = UUID()
     var name: String
     var summary: String
     var imageName: String
