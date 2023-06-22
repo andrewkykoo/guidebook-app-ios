@@ -16,6 +16,7 @@
 		B58677812A43AE4700247136 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58677802A43AE4700247136 /* DataService.swift */; };
 		B58677872A43AF3500247136 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58677862A43AF3500247136 /* City.swift */; };
 		B58677892A43AF7A00247136 /* Attraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58677882A43AF7A00247136 /* Attraction.swift */; };
+		B586778C2A44DAB000247136 /* CityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B586778B2A44DAB000247136 /* CityCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		B58677802A43AE4700247136 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		B58677862A43AF3500247136 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		B58677882A43AF7A00247136 /* Attraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attraction.swift; sourceTree = "<group>"; };
+		B586778B2A44DAB000247136 /* CityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				B58677702A43AD2C00247136 /* CityView.swift */,
 				B586777C2A43AE0500247136 /* AttractionView.swift */,
 				B586777E2A43AE1000247136 /* DetailView.swift */,
+				B586778B2A44DAB000247136 /* CityCard.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				B586777F2A43AE1000247136 /* DetailView.swift in Sources */,
 				B58677872A43AF3500247136 /* City.swift in Sources */,
 				B58677892A43AF7A00247136 /* Attraction.swift in Sources */,
+				B586778C2A44DAB000247136 /* CityCard.swift in Sources */,
 				B586776F2A43AD2C00247136 /* GuidebookApp.swift in Sources */,
 				B586777D2A43AE0500247136 /* AttractionView.swift in Sources */,
 				B58677812A43AE4700247136 /* DataService.swift in Sources */,
