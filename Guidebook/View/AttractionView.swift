@@ -17,12 +17,15 @@ struct AttractionView: View {
                     NavigationLink {
                         DetailView(attraction: att)
                     } label: {
-                        Text(att.name)
+                        AttractionRow(attraction: att)
+                            .padding(.bottom, 50)
                     }
+                    .buttonStyle(.plain)
 
                 }
             }
         }
+        .padding(.horizontal)
     }
 }
 
