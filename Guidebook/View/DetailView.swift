@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DetailView: View {
     var attraction: Attraction
+    
     var body: some View {
         VStack(spacing: 20) {
             Image(attraction.imageName)
@@ -24,12 +25,42 @@ struct DetailView: View {
                     
                     Text(attraction.longDescription)
                         .multilineTextAlignment(.leading)
+                    
+                    // create URL instance based on URL scheme
+                    if let url = URL(string: "maps://?q=\(cleanName(name: attraction.name))&sll=\(cleanCoords(latLong: attraction.latLong))&z=10&t=s") {
+                        
+                        // test if URL can be opened
+                        if UIApplication.shared.canOpenURL(url) {
+                            Button {
+                                // open the URL
+                                UIApplication.shared.open(url)
+
+                            } label: {
+                                ZStack {
+                                    RoundedRectangle(cornerRadius: 15)
+                                        .frame(height: 40)
+                                        .foregroundColor(.blue)
+                                    Text("Get Directions")
+                                        .foregroundColor(.white)
+                                    
+                                }
+                            }
+                        }
+                    }
                 }
-                .padding()
+                .padding(.bottom, 20)
             }
             .padding(.horizontal)
         }
         .ignoresSafeArea()
+    }
+    
+    func cleanName(name: String) -> String {
+        return name.replacingOccurrences(of: " ", with: "+").folding(options: .diacriticInsensitive, locale: .current)
+    }
+    
+    func cleanCoords(latLong: String) -> String {
+        return latLong.replacingOccurrences(of: " ", with: "")
     }
 }
 
